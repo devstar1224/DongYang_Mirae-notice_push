@@ -26,8 +26,9 @@
                 SaveSetting("dongyang", "last_refresh", "date_elec", GetMd5Hash(date_hash)) '게시글 날자만 잘라서 md5으로 유효성검사
             End With
             Form1.Label9.Text = My.Computer.Clock.LocalTime
+            Return (Nothing)
         Catch
-            MsgBox("새로고침도중 오류가 발생하였습니다. 오류 내용은 다음과 같습니다." & vbCrLf & ErrorToString())
+            Return (ErrorToString())
         End Try
     End Function
 End Module

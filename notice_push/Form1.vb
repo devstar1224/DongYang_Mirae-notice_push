@@ -3,6 +3,7 @@
     Public bin_hen As Integer = 0
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         On Error Resume Next
+        refresh_menu("all")
         CheckBox1.Checked = GetSetting("dongyang", "check_box", "alarm_stat")
         CheckBox2.Checked = GetSetting("dongyang", "check_box", "alarm2_stat")
         auto_rf_chk.Checked = GetSetting("dongyang", "check_box", "auto_rf")
@@ -24,10 +25,6 @@
             auto_rf2.Interval = (NumericUpDown2.Value * 60000)
             auto_rf2.Enabled = True
         End If
-        refresh_main()
-        refresh_elec()
-        refresh_elect_total()
-        refresh_soft()
         If RadioButton1.Checked = False And RadioButton2.Checked = False And RadioButton3.Checked = False Then
             RadioButton1.Checked = True
         End If
@@ -38,10 +35,7 @@
         End If
     End Sub
     Private Sub refresh_btt_Click(sender As Object, e As EventArgs) Handles refresh_btt.Click
-        refresh_main()
-        refresh_elec()
-        refresh_elect_total()
-        refresh_soft()
+        refresh_menu("all")
         If auto_rf_chk.Checked = True Then
             auto_rf.Enabled = False
             auto_rf.Interval = (NumericUpDown1.Value * 60000)
@@ -59,6 +53,7 @@
         auto_rf.Enabled = False
         auto_rf.Enabled = True
     End Sub
+#Region "이스터애그 창출력"
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         bin_hen = hen_menu
         If hen_menu = bin_hen Then
@@ -72,19 +67,20 @@
             Form2.Show()
         End If
     End Sub
+#End Region
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
         SaveSetting("dongyang", "check_box", "elect_total", RadioButton1.Checked)
-        refresh_elect_total()
+        refresh_menu("elect_total")
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
         SaveSetting("dongyang", "check_box", "elect_elec", RadioButton2.Checked)
-        refresh_elec()
+        refresh_menu("elec")
     End Sub
 
     Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
         SaveSetting("dongyang", "check_box", "elect_soft", RadioButton3.Checked)
-        refresh_soft()
+        refresh_menu("soft")
     End Sub
 
     Private Sub ListBox2_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles ListBox2.MouseDoubleClick
@@ -130,11 +126,6 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         SaveSetting("dongyang", "check_box", "auto_interval", NumericUpDown1.Value)
     End Sub
-
-    Private Sub NumericUpDown1_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown1.ValueChanged
-
-    End Sub
-
     Private Sub CheckBox1_Click(sender As Object, e As EventArgs) Handles CheckBox1.Click
         SaveSetting("dongyang", "check_box", "alarm_stat", CheckBox1.Checked)
     End Sub

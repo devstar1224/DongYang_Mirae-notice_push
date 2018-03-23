@@ -119,6 +119,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="refresh_md.vb" />
     <Compile Include="ref_elec.vb" />
     <Compile Include="ref_elect_total.vb" />
     <Compile Include="ref_soft.vb" />
