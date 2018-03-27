@@ -15,7 +15,7 @@
     Public http_source_elec As String
 #End Region
 #Region "refresh_main"
-    Public Function refresh_main()
+    Public Function Refresh_main()
         Try
             Form1.ListBox1.Items.Clear()
             Dim date_hash As String
@@ -46,7 +46,7 @@
     End Function
 #End Region
 #Region "refresh_soft"
-    Public Function refresh_soft()
+    Public Function Refresh_soft()
         Try
             Form1.ListBox2.Items.Clear()
             Dim date_hash As String
@@ -77,7 +77,7 @@
     End Function
 #End Region
 #Region "refresh_elect_total"
-    Public Function refresh_elect_total()
+    Public Function Refresh_elect_total()
         Try
             Form1.ListBox2.Items.Clear()
             Dim date_hash As String
@@ -108,7 +108,7 @@
     End Function
 #End Region
 #Region "refresh_elect"
-    Public Function refresh_elec()
+    Public Function Refresh_elec()
         Try
             Form1.ListBox2.Items.Clear()
             Dim date_hash As String

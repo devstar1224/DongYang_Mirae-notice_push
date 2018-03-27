@@ -48,7 +48,7 @@
         End If
     End Sub
     Private Sub auto_rf_Tick(sender As Object, e As EventArgs) Handles auto_rf.Tick
-        refresh_main()
+        Refresh_main()
         auto_rf.Interval = (NumericUpDown1.Value * 60000)
         auto_rf.Enabled = False
         auto_rf.Enabled = True
@@ -99,9 +99,9 @@
         End If
     End Sub
     Private Sub auto_rf2_Tick(sender As Object, e As EventArgs) Handles auto_rf2.Tick
-        refresh_elec()
-        refresh_elect_total()
-        refresh_soft()
+        Refresh_elec()
+        Refresh_elect_total()
+        Refresh_soft()
         auto_rf2.Interval = (NumericUpDown1.Value * 60000)
         auto_rf2.Enabled = False
         auto_rf2.Enabled = True
