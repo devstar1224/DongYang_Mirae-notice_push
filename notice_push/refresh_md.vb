@@ -1,7 +1,6 @@
 ﻿Module refresh_md
     Function refresh_menu(select_item As String)
         Dim error_msg As String
-        Dim error_count As Integer
         Select Case (select_item)
             Case "all"
                 error_msg = refresh_main()
