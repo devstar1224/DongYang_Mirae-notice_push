@@ -23,7 +23,7 @@
                 .Open("GET", "http://www.dongyang.ac.kr/web/www/-11")
                 .Send()
                 http_source = Split(Split(Split(.ResponseText, "table-list full-table remove-08 remove-07 i-reset")(1), "</ul>")(0), "<ul>")(0)
-                For i = 2 To 11 '게시글이 10개 가정 10번 loop
+                For i = 2 To 11 '게시글 10개 가져오기
                     date_hash = date_hash & Split(Split(http_source, "col-05"">")(i), "</div>")(0)
                     Form1.ListBox1.Items.Add(Split(Split(http_source, "<span class=""t""")(i - 1), "</span>")(0))
                     href_index(i - 2) = Split(Split(http_source, "href=""")(i - 1), """ class")(0)
@@ -36,7 +36,7 @@
                         My.Computer.Audio.Play(Application.StartupPath & "\sound\ring.wav")
                     End If
                 End If
-                SaveSetting("dongyang", "last_refresh", "date", GetMd5Hash(date_hash)) '게시글 날자만 잘라서 md5으로 유효성검사
+                SaveSetting("dongyang", "last_refresh", "date", GetMd5Hash(date_hash)) '게시글 날자만 잘라서 md5으로 유효성검사 저장
             End With
             Form1.show_date.Text = My.Computer.Clock.LocalTime
             Return (Nothing)
@@ -85,7 +85,7 @@
                 .Open("GET", "http://www.dongyang.ac.kr/web/epower/-19")
                 .Send()
                 http_source_elect_total = Split(Split(Split(.ResponseText, "table-list full-table remove-08 remove-07 i-reset")(1), "</ul>")(0), "<ul>")(0)
-                For i = 2 To 16
+                For i = 2 To 16 ' 게시글이 15개
                     date_hash = date_hash & Split(Split(http_source_elect_total, "col-05"">")(i), "</div>")(0)
                     Form1.ListBox2.Items.Add(Split(Split(http_source_elect_total, "<span class=""t""")(i - 1), "</span>")(0))
                     href_index_elect_total(i - 2) = Split(Split(http_source_elect_total, "href=""")(i - 1), """ class")(0)

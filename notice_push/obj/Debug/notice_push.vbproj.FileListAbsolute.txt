@@ -26,3 +26,4 @@ C:\Users\user\Documents\GitHub\DongYang_Mirae-notice_push\notice_push\obj\Debug\
 C:\Users\user\Documents\GitHub\DongYang_Mirae-notice_push\notice_push\obj\Debug\notice_push.exe
 C:\Users\user\Documents\GitHub\DongYang_Mirae-notice_push\notice_push\obj\Debug\notice_push.xml
 C:\Users\user\Documents\GitHub\DongYang_Mirae-notice_push\notice_push\obj\Debug\notice_push.pdb
+C:\Users\user\Documents\GitHub\DongYang_Mirae-notice_push\notice_push\obj\Debug\notice_push.vbprojResolveAssemblyReference.cache
