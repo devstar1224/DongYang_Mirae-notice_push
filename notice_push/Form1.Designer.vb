@@ -64,9 +64,9 @@ Partial Class Form1
         '
         'refresh_btt
         '
-        Me.refresh_btt.Location = New System.Drawing.Point(202, 280)
+        Me.refresh_btt.Location = New System.Drawing.Point(236, 258)
         Me.refresh_btt.Name = "refresh_btt"
-        Me.refresh_btt.Size = New System.Drawing.Size(119, 23)
+        Me.refresh_btt.Size = New System.Drawing.Size(139, 21)
         Me.refresh_btt.TabIndex = 1
         Me.refresh_btt.Text = "ALL Refresh"
         Me.refresh_btt.UseVisualStyleBackColor = True
@@ -74,45 +74,45 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(10, 9)
+        Me.Label1.Location = New System.Drawing.Point(12, 8)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 13)
+        Me.Label1.Size = New System.Drawing.Size(104, 12)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Last refresh date:"
         '
         'show_date
         '
         Me.show_date.AutoSize = True
-        Me.show_date.Location = New System.Drawing.Point(103, 9)
+        Me.show_date.Location = New System.Drawing.Point(120, 8)
         Me.show_date.Name = "show_date"
-        Me.show_date.Size = New System.Drawing.Size(109, 13)
+        Me.show_date.Size = New System.Drawing.Size(137, 12)
         Me.show_date.TabIndex = 3
         Me.show_date.Text = "yyyy-mm-dd / HH:MM"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(33, 30)
+        Me.Label2.Location = New System.Drawing.Point(38, 28)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 13)
+        Me.Label2.Size = New System.Drawing.Size(77, 12)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "New notice: "
         '
         'show_note_nv
         '
         Me.show_note_nv.AutoSize = True
-        Me.show_note_nv.Location = New System.Drawing.Point(105, 30)
+        Me.show_note_nv.Location = New System.Drawing.Point(122, 28)
         Me.show_note_nv.Name = "show_note_nv"
-        Me.show_note_nv.Size = New System.Drawing.Size(40, 13)
+        Me.show_note_nv.Size = New System.Drawing.Size(66, 12)
         Me.show_note_nv.TabIndex = 5
-        Me.show_note_nv.Text = "yes/no"
+        Me.show_note_nv.Text = "Not loaded"
         '
         'auto_rf_chk
         '
         Me.auto_rf_chk.AutoSize = True
-        Me.auto_rf_chk.Location = New System.Drawing.Point(18, 10)
+        Me.auto_rf_chk.Location = New System.Drawing.Point(21, 9)
         Me.auto_rf_chk.Name = "auto_rf_chk"
-        Me.auto_rf_chk.Size = New System.Drawing.Size(88, 17)
+        Me.auto_rf_chk.Size = New System.Drawing.Size(96, 16)
         Me.auto_rf_chk.TabIndex = 6
         Me.auto_rf_chk.Text = "Auto Refresh"
         Me.auto_rf_chk.UseVisualStyleBackColor = True
@@ -120,9 +120,9 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(63, 42)
+        Me.Label3.Location = New System.Drawing.Point(73, 39)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.Size = New System.Drawing.Size(43, 12)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Minute"
         '
@@ -132,27 +132,27 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.NumericUpDown1)
         Me.Panel1.Controls.Add(Me.auto_rf_chk)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Location = New System.Drawing.Point(375, 3)
+        Me.Panel1.Location = New System.Drawing.Point(437, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(159, 76)
+        Me.Panel1.Size = New System.Drawing.Size(185, 70)
         Me.Panel1.TabIndex = 9
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(102, 17)
+        Me.Button2.Location = New System.Drawing.Point(119, 16)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(50, 33)
+        Me.Button2.Size = New System.Drawing.Size(58, 30)
         Me.Button2.TabIndex = 29
         Me.Button2.Text = "save"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(11, 40)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(13, 37)
         Me.NumericUpDown1.Maximum = New Decimal(New Integer() {300, 0, 0, 0})
         Me.NumericUpDown1.Minimum = New Decimal(New Integer() {5, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(47, 20)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(55, 21)
         Me.NumericUpDown1.TabIndex = 10
         Me.NumericUpDown1.Value = New Decimal(New Integer() {60, 0, 0, 0})
         '
@@ -161,9 +161,9 @@ Partial Class Form1
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Checked = True
         Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox1.Location = New System.Drawing.Point(12, 57)
+        Me.CheckBox1.Location = New System.Drawing.Point(14, 53)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(106, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(122, 16)
         Me.CheckBox1.TabIndex = 10
         Me.CheckBox1.Text = "new notice alarm"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -171,18 +171,19 @@ Partial Class Form1
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(12, 86)
+        Me.ListBox1.ItemHeight = 12
+        Me.ListBox1.Location = New System.Drawing.Point(14, 79)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.ScrollAlwaysVisible = True
-        Me.ListBox1.Size = New System.Drawing.Size(522, 173)
+        Me.ListBox1.Size = New System.Drawing.Size(608, 160)
         Me.ListBox1.TabIndex = 12
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(122, 59)
+        Me.Label4.Location = New System.Drawing.Point(142, 54)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(160, 13)
+        Me.Label4.Size = New System.Drawing.Size(173, 12)
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "최상단 10개까지만 가져옵니다."
         '
@@ -197,10 +198,11 @@ Partial Class Form1
         'ListBox2
         '
         Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Location = New System.Drawing.Point(12, 355)
+        Me.ListBox2.ItemHeight = 12
+        Me.ListBox2.Location = New System.Drawing.Point(14, 328)
         Me.ListBox2.Name = "ListBox2"
         Me.ListBox2.ScrollAlwaysVisible = True
-        Me.ListBox2.Size = New System.Drawing.Size(522, 173)
+        Me.ListBox2.Size = New System.Drawing.Size(608, 160)
         Me.ListBox2.TabIndex = 21
         '
         'CheckBox2
@@ -208,9 +210,9 @@ Partial Class Form1
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Checked = True
         Me.CheckBox2.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox2.Location = New System.Drawing.Point(12, 332)
+        Me.CheckBox2.Location = New System.Drawing.Point(14, 306)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(106, 17)
+        Me.CheckBox2.Size = New System.Drawing.Size(122, 16)
         Me.CheckBox2.TabIndex = 20
         Me.CheckBox2.Text = "new notice alarm"
         Me.CheckBox2.UseVisualStyleBackColor = True
@@ -221,36 +223,36 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.NumericUpDown2)
         Me.Panel2.Controls.Add(Me.CheckBox3)
         Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Location = New System.Drawing.Point(375, 273)
+        Me.Panel2.Location = New System.Drawing.Point(437, 252)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(159, 76)
+        Me.Panel2.Size = New System.Drawing.Size(185, 70)
         Me.Panel2.TabIndex = 19
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(102, 21)
+        Me.Button1.Location = New System.Drawing.Point(119, 19)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(50, 33)
+        Me.Button1.Size = New System.Drawing.Size(58, 30)
         Me.Button1.TabIndex = 28
         Me.Button1.Text = "save"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'NumericUpDown2
         '
-        Me.NumericUpDown2.Location = New System.Drawing.Point(11, 40)
+        Me.NumericUpDown2.Location = New System.Drawing.Point(13, 37)
         Me.NumericUpDown2.Maximum = New Decimal(New Integer() {300, 0, 0, 0})
         Me.NumericUpDown2.Minimum = New Decimal(New Integer() {5, 0, 0, 0})
         Me.NumericUpDown2.Name = "NumericUpDown2"
-        Me.NumericUpDown2.Size = New System.Drawing.Size(47, 20)
+        Me.NumericUpDown2.Size = New System.Drawing.Size(55, 21)
         Me.NumericUpDown2.TabIndex = 10
         Me.NumericUpDown2.Value = New Decimal(New Integer() {60, 0, 0, 0})
         '
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(18, 10)
+        Me.CheckBox3.Location = New System.Drawing.Point(21, 9)
         Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(88, 17)
+        Me.CheckBox3.Size = New System.Drawing.Size(96, 16)
         Me.CheckBox3.TabIndex = 6
         Me.CheckBox3.Text = "Auto Refresh"
         Me.CheckBox3.UseVisualStyleBackColor = True
@@ -258,54 +260,54 @@ Partial Class Form1
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(63, 42)
+        Me.Label6.Location = New System.Drawing.Point(73, 39)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(39, 13)
+        Me.Label6.Size = New System.Drawing.Size(43, 12)
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Minute"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(122, 556)
+        Me.Label7.Location = New System.Drawing.Point(142, 513)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(40, 13)
+        Me.Label7.Size = New System.Drawing.Size(66, 12)
         Me.Label7.TabIndex = 18
-        Me.Label7.Text = "yes/no"
+        Me.Label7.Text = "Not loaded"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(10, 558)
+        Me.Label8.Location = New System.Drawing.Point(12, 515)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(67, 13)
+        Me.Label8.Size = New System.Drawing.Size(77, 12)
         Me.Label8.TabIndex = 17
         Me.Label8.Text = "New notice: "
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(103, 313)
+        Me.Label9.Location = New System.Drawing.Point(120, 289)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(109, 13)
+        Me.Label9.Size = New System.Drawing.Size(137, 12)
         Me.Label9.TabIndex = 16
         Me.Label9.Text = "yyyy-mm-dd / HH:MM"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(10, 313)
+        Me.Label10.Location = New System.Drawing.Point(12, 289)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(89, 13)
+        Me.Label10.Size = New System.Drawing.Size(104, 12)
         Me.Label10.TabIndex = 15
         Me.Label10.Text = "Last refresh date:"
         '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(87, 535)
+        Me.RadioButton1.Location = New System.Drawing.Point(101, 494)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(130, 17)
+        Me.RadioButton1.Size = New System.Drawing.Size(141, 16)
         Me.RadioButton1.TabIndex = 23
         Me.RadioButton1.Text = "전기전자통신공(학부)"
         Me.RadioButton1.UseVisualStyleBackColor = True
@@ -313,9 +315,9 @@ Partial Class Form1
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(231, 535)
+        Me.RadioButton2.Location = New System.Drawing.Point(269, 494)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(130, 17)
+        Me.RadioButton2.Size = New System.Drawing.Size(141, 16)
         Me.RadioButton2.TabIndex = 24
         Me.RadioButton2.Text = "전기전자통신공학(과)"
         Me.RadioButton2.UseVisualStyleBackColor = True
@@ -323,9 +325,9 @@ Partial Class Form1
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(375, 535)
+        Me.RadioButton3.Location = New System.Drawing.Point(437, 494)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(152, 17)
+        Me.RadioButton3.Size = New System.Drawing.Size(165, 16)
         Me.RadioButton3.TabIndex = 25
         Me.RadioButton3.Text = "컴퓨터소프트웨어공학(과)"
         Me.RadioButton3.UseVisualStyleBackColor = True
@@ -333,29 +335,29 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(273, 556)
+        Me.Label5.Location = New System.Drawing.Point(309, 513)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(40, 13)
+        Me.Label5.Size = New System.Drawing.Size(66, 12)
         Me.Label5.TabIndex = 26
-        Me.Label5.Text = "yes/no"
+        Me.Label5.Text = "Not loaded"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(435, 556)
+        Me.Label11.Location = New System.Drawing.Point(488, 513)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(40, 13)
+        Me.Label11.Size = New System.Drawing.Size(66, 12)
         Me.Label11.TabIndex = 27
-        Me.Label11.Text = "yes/no"
+        Me.Label11.Text = "Not loaded"
         '
         'auto_rf2
         '
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(541, 581)
+        Me.ClientSize = New System.Drawing.Size(631, 536)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.RadioButton3)

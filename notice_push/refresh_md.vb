@@ -1,5 +1,5 @@
 ﻿Friend Module refresh_md
-    Function refresh_menu(select_item As String)
+    Function refresh_menu(select_item As String, second_select As Integer)
         Dim error_msg As String
         Select Case (select_item)
             Case "all"
@@ -8,20 +8,26 @@
                     MsgBox("에러 발생 : " & error_msg)
                     End
                 End If
-                error_msg = Refresh_elec()
-                If error_msg IsNot Nothing Then
-                    MsgBox("에러 발생 : " & error_msg)
-                    End
+                If second_select = 2 Then
+                    error_msg = Refresh_elec()
+                    If error_msg IsNot Nothing Then
+                        MsgBox("에러 발생 : " & error_msg)
+                        End
+                    End If
                 End If
-                error_msg = Refresh_elect_total()
-                If error_msg IsNot Nothing Then
-                    MsgBox("에러 발생 : " & error_msg)
-                    End
+                If second_select = 1 Then
+                    error_msg = Refresh_elect_total()
+                    If error_msg IsNot Nothing Then
+                        MsgBox("에러 발생 : " & error_msg)
+                        End
+                    End If
                 End If
-                error_msg = Refresh_soft()
-                If error_msg IsNot Nothing Then
-                    MsgBox("에러 발생 : " & error_msg)
-                    End
+                If second_select = 3 Then
+                    error_msg = Refresh_soft()
+                    If error_msg IsNot Nothing Then
+                        MsgBox("에러 발생 : " & error_msg)
+                        End
+                    End If
                 End If
             Case "main"
                 error_msg = Refresh_main()

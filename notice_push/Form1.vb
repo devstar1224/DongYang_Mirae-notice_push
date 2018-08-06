@@ -3,7 +3,6 @@
     Public bin_hen As Integer = 0
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         On Error Resume Next
-        refresh_menu("all")
         CheckBox1.Checked = GetSetting("dongyang", "check_box", "alarm_stat")
         CheckBox2.Checked = GetSetting("dongyang", "check_box", "alarm2_stat")
         auto_rf_chk.Checked = GetSetting("dongyang", "check_box", "auto_rf")
@@ -13,6 +12,17 @@
         RadioButton1.Checked = GetSetting("dongyang", "check_box", "elect_elect")
         RadioButton2.Checked = GetSetting("dongyang", "check_box", "elect_elec")
         RadioButton3.Checked = GetSetting("dongyang", "check_box", "elect_soft")
+        If (RadioButton1.Checked = True) Then
+            refresh_menu("all", 1)
+        ElseIf (RadioButton2.Checked = True) Then
+            refresh_menu("all", 2)
+        ElseIf (RadioButton3.Checked = True) Then
+            refresh_menu("all", 3)
+        Else
+            RadioButton3.Checked = True
+            SaveSetting("dongyang", "check_box", "elect_soft", RadioButton3.Checked)
+            refresh_menu("all", 3)
+        End If
         If auto_rf_chk.Checked = False Then
             NumericUpDown1.Enabled = False
         Else
@@ -25,9 +35,6 @@
             auto_rf2.Interval = (NumericUpDown2.Value * 60000)
             auto_rf2.Enabled = True
         End If
-        If RadioButton1.Checked = False And RadioButton2.Checked = False And RadioButton3.Checked = False Then
-            RadioButton1.Checked = True
-        End If
     End Sub
     Private Sub ListBox1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles ListBox1.MouseDoubleClick
         If MsgBox(ListBox1.SelectedItem & "으로 이동하시겠습니까?", vbYesNo, "하이퍼링크") = vbYes Then
@@ -35,7 +42,13 @@
         End If
     End Sub
     Private Sub refresh_btt_Click(sender As Object, e As EventArgs) Handles refresh_btt.Click
-        refresh_menu("all")
+        If RadioButton1.Checked = True Then
+            refresh_menu("all", 1)
+        ElseIf (RadioButton2.Checked = True) Then
+            refresh_menu("all", 2)
+        Else
+            refresh_menu("all", 3)
+        End If
         If auto_rf_chk.Checked = True Then
             auto_rf.Enabled = False
             auto_rf.Interval = (NumericUpDown1.Value * 60000)
@@ -48,7 +61,13 @@
         End If
     End Sub
     Private Sub auto_rf_Tick(sender As Object, e As EventArgs) Handles auto_rf.Tick
-        refresh_menu("main")
+        If RadioButton1.Checked = True Then
+            refresh_menu("all", 1)
+        ElseIf (RadioButton2.Checked = True) Then
+            refresh_menu("all", 2)
+        Else
+            refresh_menu("all", 3)
+        End If
         auto_rf.Interval = (NumericUpDown1.Value * 60000)
         auto_rf.Enabled = False
         auto_rf.Enabled = True
@@ -70,17 +89,17 @@
 #End Region
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
         SaveSetting("dongyang", "check_box", "elect_total", RadioButton1.Checked)
-        refresh_menu("elect_total")
+        refresh_menu("elect_total", Nothing)
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
         SaveSetting("dongyang", "check_box", "elect_elec", RadioButton2.Checked)
-        refresh_menu("elec")
+        refresh_menu("elec", Nothing)
     End Sub
 
     Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
         SaveSetting("dongyang", "check_box", "elect_soft", RadioButton3.Checked)
-        refresh_menu("soft")
+        refresh_menu("soft", Nothing)
     End Sub
 
     Private Sub ListBox2_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles ListBox2.MouseDoubleClick
@@ -99,7 +118,13 @@
         End If
     End Sub
     Private Sub auto_rf2_Tick(sender As Object, e As EventArgs) Handles auto_rf2.Tick
-        refresh_menu("all")
+        If RadioButton1.Checked = True Then
+            refresh_menu("all", 1)
+        ElseIf (RadioButton2.Checked = True) Then
+            refresh_menu("all", 2)
+        Else
+            refresh_menu("all", 3)
+        End If
         auto_rf2.Interval = (NumericUpDown1.Value * 60000)
         auto_rf2.Enabled = False
         auto_rf2.Enabled = True
